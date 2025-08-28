@@ -56,7 +56,7 @@
     .content-wrapper {
       position: relative;
       z-index: 10;
-      padding: 60px 20px 80px; /* снизу больше отступ */
+      padding: 60px 20px 100px;
       max-width: 800px;
       margin: 0 auto;
       text-align: center;
@@ -97,31 +97,47 @@
     .contacts {
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 20px;
       align-items: center;
       font-size: 1rem;
     }
 
-    .phone {
-      font-weight: 600;
-    }
-
-    .btn-telegram {
+    .btn-bot {
       background: #d4af37;
       color: #0b1a2b;
-      padding: 10px 22px;
-      border-radius: 6px;
+      padding: 12px 24px;
+      border-radius: 8px;
       font-weight: 700;
       text-decoration: none;
       transition: background 0.3s ease;
       box-shadow: 0 0 8px #d4af37aa;
     }
 
-    .btn-telegram:hover {
+    .btn-bot:hover {
       background: #b38e2e;
     }
 
-    /* Капли */
+    .telegram-direct {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #f9f5f0cc;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+    .telegram-direct a {
+      color: #f9f5f0;
+      text-decoration: none;
+    }
+
+    .telegram-icon {
+      width: 24px;
+      height: 24px;
+      filter: brightness(1.5);
+    }
+
+    /* Анимация капель */
     .drop:nth-child(1) { left: 10%; width: 10px; height: 25px; animation-duration: 8s; animation-delay: 0s; }
     .drop:nth-child(2) { left: 25%; width: 14px; height: 30px; animation-duration: 10s; animation-delay: 2s; }
     .drop:nth-child(3) { left: 40%; width: 8px; height: 20px; animation-duration: 9s; animation-delay: 3s; }
@@ -129,7 +145,6 @@
     .drop:nth-child(5) { left: 75%; width: 10px; height: 24px; animation-duration: 7s; animation-delay: 4s; }
     .drop:nth-child(6) { left: 90%; width: 15px; height: 32px; animation-duration: 12s; animation-delay: 5s; }
 
-    /* Адаптивность */
     @media (max-width: 600px) {
       h1 {
         font-size: 1.7rem;
@@ -165,8 +180,12 @@
     </p>
 
     <div class="contacts">
-      <span class="phone">Телефон: 8-901-900-30-77</span>
-      <a class="btn-telegram" href="https://t.me/Bboytikes" target="_blank">@Bboytikes</a>
+      <a class="btn-bot" href="#">Быстрый заказ, больше функционала</a>
+
+      <div class="telegram-direct">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" class="telegram-icon" alt="Telegram" />
+        <a href="https://t.me/Bboytikes" target="_blank">Личная связь</a>
+      </div>
     </div>
   </div>
 </body>

@@ -14,22 +14,23 @@
       background: #0b1a2b;
       color: #f9f5f0;
       min-height: 100%;
-      overflow-x: hidden;
+      width: 100%;
     }
 
     body {
       position: relative;
+      overflow-x: hidden;
     }
 
     .background-animation {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      pointer-events: none;
       z-index: 0;
       background: linear-gradient(135deg, #112b4f, #0b1a2b);
+      pointer-events: none;
       overflow: hidden;
     }
 
@@ -55,7 +56,7 @@
     .content-wrapper {
       position: relative;
       z-index: 10;
-      padding: 40px 20px;
+      padding: 60px 20px 80px; /* снизу больше отступ */
       max-width: 800px;
       margin: 0 auto;
       text-align: center;
@@ -155,7 +156,7 @@
   <div class="content-wrapper">
     <div class="brand-name">КлиннингАГ</div>
 
-    <h1>Мойка окон — чистота и прозрачность вашего успеха</h1>
+    <h1>Мойка окон —<br> чистота и прозрачность<br>вашего успеха</h1>
 
     <p>
       Спасибо, что выбрали именно нас!<br>

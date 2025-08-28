@@ -3,11 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Мойка окон — Ваша чистота</title>
+  <title>Мойка окон</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap');
-
-    /* Фон и общий стиль */
     body {
       margin: 0;
       background: #0b1a2b;
@@ -24,96 +21,13 @@
       position: relative;
     }
 
-    /* Анимация капель для фона */
-    .background-animation {
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      pointer-events: none;
-      z-index: 0;
-      overflow: hidden;
-      background: linear-gradient(135deg, #112b4f, #0b1a2b 70%);
-    }
-
-    /* Капли — смыв окон */
-    .drop {
-      position: absolute;
-      bottom: -100px;
-      width: 12px;
-      height: 40px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 80%);
-      border-radius: 6px / 20px;
-      opacity: 0.6;
-      animation-name: dropFall;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-    }
-
-    @keyframes dropFall {
-      0% {
-        transform: translateY(0) translateX(0) rotate(0deg);
-        opacity: 0.6;
-      }
-      80% {
-        opacity: 0.6;
-      }
-      100% {
-        transform: translateY(-120vh) translateX(10px) rotate(30deg);
-        opacity: 0;
-      }
-    }
-
-    /* Генерация капель разной скорости и позиции */
-    .drop:nth-child(1) {
-      left: 15%;
-      animation-duration: 7s;
-      animation-delay: 0s;
-    }
-    .drop:nth-child(2) {
-      left: 30%;
-      animation-duration: 6s;
-      animation-delay: 2s;
-    }
-    .drop:nth-child(3) {
-      left: 50%;
-      animation-duration: 8s;
-      animation-delay: 1.5s;
-    }
-    .drop:nth-child(4) {
-      left: 65%;
-      animation-duration: 5s;
-      animation-delay: 3s;
-    }
-    .drop:nth-child(5) {
-      left: 80%;
-      animation-duration: 7.5s;
-      animation-delay: 4s;
-    }
-
-    /* Заголовок с анимацией появления букв */
     h1 {
       font-family: 'Playfair Display', serif;
       font-size: 2.8rem;
       color: #d4af37;
       margin-bottom: 25px;
-      overflow: hidden;
-      white-space: nowrap;
-      border-right: 3px solid #d4af37;
-      width: fit-content;
-      animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-      margin: 0 auto 25px;
-      max-width: 90vw;
     }
 
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-    @keyframes blink-caret {
-      50% { border-color: transparent; }
-      100% { border-color: #d4af37; }
-    }
-
-    /* Текст абзацев */
     p {
       font-size: 1.15rem;
       line-height: 1.6;
@@ -126,7 +40,6 @@
       letter-spacing: 0.03em;
     }
 
-    /* Контакты */
     .contacts {
       font-size: 1.1rem;
       margin-bottom: 20px;
@@ -143,7 +56,6 @@
     .phone {
       font-weight: 600;
       color: #f9f5f0ee;
-      font-family: 'Roboto', sans-serif;
     }
 
     .btn-telegram {
@@ -159,7 +71,6 @@
       display: inline-block;
       transition: background 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 0 8px #d4af37aa;
-      font-family: 'Roboto', sans-serif;
       width: max-content;
       user-select: none;
     }
@@ -167,40 +78,9 @@
       background: #b78f27;
       box-shadow: 0 0 14px #b78f2799;
     }
-
-    /* Адаптив для мобильных */
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 1.9rem;
-      }
-      p {
-        font-size: 1rem;
-        max-width: 90vw;
-        text-indent: 1em;
-      }
-      .contacts {
-        font-size: 1rem;
-        max-width: 90vw;
-      }
-      .btn-telegram {
-        padding: 8px 18px;
-        font-size: 0.9rem;
-      }
-      .phone {
-        font-size: 1rem;
-      }
-    }
   </style>
 </head>
 <body>
-  <div class="background-animation" aria-hidden="true">
-    <div class="drop"></div>
-    <div class="drop"></div>
-    <div class="drop"></div>
-    <div class="drop"></div>
-    <div class="drop"></div>
-  </div>
-
   <h1>Мойка окон — чистота и прозрачность вашего успеха</h1>
 
   <p>Спасибо, что выбрали именно нас!<br>
